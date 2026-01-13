@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday My Love 💖</title>
+<style>
+body{
+margin:0;
+font-family:Segoe UI;
+background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+text-align:center;
+color:white;
+overflow-x:hidden;
+}
+h1{font-size:55px;margin-top:40px;animation:beat 1.5s infinite;}
+@keyframes beat{0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);}}
+.gallery{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;padding:30px;}
+.gallery img{width:220px;height:220px;object-fit:cover;border-radius:25px;box-shadow:0 10px 20px rgba(0,0,0,.3);}
+.heart{position:fixed;font-size:20px;color:#ff4d6d;animation:float 6s linear infinite;}
+@keyframes float{0%{bottom:-10px;}100%{bottom:110%;}}
+.candles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.candle {
+    width: 20px;
+    height: 80px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.flame {
+    width: 12px;
+    height: 12px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    left: 4px;
+    animation: flicker 0.4s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.2); opacity: 0.7; }
+}
+.gallery img {
+    animation: fadeZoom 1.5s ease forwards;
+    opacity: 0;
+}
+
+.gallery img:nth-child(1) { animation-delay: 0.3s; }
+.gallery img:nth-child(2) { animation-delay: 0.6s; }
+.gallery img:nth-child(3) { animation-delay: 0.9s; }
+.gallery img:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.gallery img:hover {
+    transform: scale(1.12) rotate(1deg);
+    transition: transform 0.4s ease;
+}
+.gallery img {
+    animation: fadeZoom 1.5s ease forwards, floatImg 4s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+</style>
+</head>
+
+<body>
+<h1>💖 Happy Birthday 💖</h1>
+<h2>My Love</h2>
+<div class="candles">
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+</div>
+
+<p>
+You are the most beautiful part of my life.  
+Thank you for loving me and making my world brighter.  
+I love you endlessly ❤️
+</p>
+
+<div class="gallery">
+<img src="image1.jpg">
+<img src="image2.jpg">
+<img src="image3.jpg">
+<img src="image4.jpg">
+</div>
+
+<footer>Forever Yours ❤️</footer>
+
+<script>
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},300);
+</script>
+</body>
+</html>
